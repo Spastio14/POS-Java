@@ -1,4 +1,333 @@
 POS Proyecto
 
 *26/01/2026:
-Creación del repositorio
+1. Creación del repositorio
+2. Estructura:
+
+🔹 1) ASISTENTE DE CONFIGURACIÓN INICIAL (Setup)
+
+Se ejecuta SOLO la primera vez.
+
+Empresa
+
+Nombre del negocio
+
+Logo (imagen)
+
+Dirección
+
+Teléfono
+
+Correo
+
+RUC / Identificación fiscal
+
+Parámetros regionales
+
+Moneda (símbolo y nombre)
+
+Impuesto (%)
+
+Zona horaria
+
+Formato fecha y hora
+
+Usuario inicial
+
+Nombre completo
+
+Usuario
+
+Contraseña
+
+Rol = ADMIN (fijo)
+
+Base de datos
+
+Crear estructura
+
+Insertar datos iniciales
+
+Marcar sistema como “configurado”
+
+👉 Luego guarda una bandera:
+
+sistema_configurado = true
+
+🔹 2) LOGIN
+
+Usuario
+
+Contraseña
+
+Validación
+
+Registro de último acceso
+
+🔹 3) USUARIOS Y ROLES
+Usuarios
+
+Crear
+
+Editar
+
+Eliminar
+
+Activar / Desactivar
+
+Roles
+
+Administrador
+
+Cajero
+
+Supervisor
+
+Permisos
+
+Vender
+
+Ver reportes
+
+Configurar sistema
+
+Gestionar productos
+
+🔹 4) PRODUCTOS
+Datos del producto
+
+Código
+
+Nombre
+
+Descripción
+
+Categoría
+
+Precio compra
+
+Precio venta
+
+Stock
+
+Stock mínimo
+
+Impuesto aplica (sí/no)
+
+Funciones
+
+Agregar
+
+Editar
+
+Eliminar
+
+Buscar
+
+Importar desde Excel (futuro)
+
+🔹 5) CATEGORÍAS
+
+Crear
+
+Editar
+
+Eliminar
+
+Ejemplo:
+
+Bebidas
+
+Limpieza
+
+Snacks
+
+🔹 6) CLIENTES
+
+Código
+
+Nombre
+
+Teléfono
+
+Correo
+
+Dirección
+
+Funciones CRUD
+
+🔹 7) PROVEEDORES
+
+Nombre
+
+Empresa
+
+Teléfono
+
+Correo
+
+🔹 8) INVENTARIO
+Entradas
+
+Compra
+
+Ajuste manual
+
+Salidas
+
+Venta
+
+Merma
+
+Control
+
+Kardex
+
+Alertas de stock bajo
+
+🔹 9) VENTAS (CORAZÓN DEL POS)
+Pantalla venta
+
+Buscar producto
+
+Agregar al carrito
+
+Cantidad
+
+Subtotal
+
+Impuesto
+
+Total
+
+Cobro
+
+Efectivo
+
+Tarjeta
+
+Mixto
+
+Al finalizar
+
+Generar ticket
+
+Guardar venta
+
+Descontar stock
+
+🔹 10) CAJA
+
+Apertura de caja
+
+Cierre de caja
+
+Monto inicial
+
+Ingresos
+
+Egresos
+
+Diferencia
+
+🔹 11) FACTURACIÓN
+
+Número de factura
+
+Serie
+
+Cliente
+
+Fecha
+
+Detalle
+
+🔹 12) REPORTES
+
+Ventas por día
+
+Ventas por usuario
+
+Productos más vendidos
+
+Ganancias
+
+Stock
+
+Exportar PDF / Excel (futuro)
+
+🔹 13) CONFIGURACIÓN GENERAL
+
+Cambiar logo
+
+Cambiar impuesto
+
+Cambiar moneda
+
+Datos empresa
+
+Backup BD
+
+Restaurar BD
+
+🔹 14) SEGURIDAD
+
+Encriptar contraseñas
+
+Registro de acciones (log)
+
+🔹 15) CIERRE DEL SISTEMA
+
+Confirmar salida
+
+Cerrar sesión
+
+🧱 ESTRUCTURA DE CARPETAS RECOMENDADA
+pos/
+ ├─ conexion/
+ ├─ modelos/
+ ├─ controladores/
+ ├─ vistas/
+ ├─ utilidades/
+ ├─ reportes/
+
+🗄️ BASE DE DATOS INICIAL
+
+Tablas mínimas:
+
+empresa
+usuarios
+roles
+productos
+categorias
+clientes
+proveedores
+ventas
+detalle_ventas
+inventario
+configuracion
+
+🚀 ORDEN CORRECTO DE DESARROLLO
+
+1️⃣ Setup inicial
+2️⃣ Login
+3️⃣ Productos
+4️⃣ Ventas
+5️⃣ Inventario
+6️⃣ Clientes
+7️⃣ Reportes
+8️⃣ Extras
+
+🎯 CONSEJO CLAVE
+
+NO intentes hacer todo de una vez.
+
+Haz un módulo funcional, luego otro.
+
+Primero:
+
+👉 Login
+👉 Productos
+👉 Venta simple
+
+Después agregas lo demás.
