@@ -331,3 +331,19 @@ Primero:
 👉 Venta simple
 
 Después agregas lo demás.
+
+
+*-Clases y tabla: 
+
+Empresa
+Usuario
+Rol
+Producto
+Categoria
+Cliente
+Proveedor
+Venta
+DetalleVenta
+Caja
+MovimientoCaja
+Configuracion
