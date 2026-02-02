@@ -12,6 +12,7 @@ public class Empleado {
     private String dni;
     private double salarioBase;
     private int idRol;
+    private String nombreRol;
     private String activo;
     private String fotoRuta;
     private LocalDateTime fechaRegistro;
@@ -88,6 +89,14 @@ public class Empleado {
 
     public void setIdRol(int idRol) {
         this.idRol = idRol;
+    }
+    
+    public String getNombreRol() {
+    	return nombreRol;
+    }
+    
+    public void setNombreRol(String nombreRol) {
+    	this.nombreRol = nombreRol;
     }
 
     public String getActivo() {

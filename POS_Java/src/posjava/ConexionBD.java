@@ -17,6 +17,7 @@ public class ConexionBD {
     // ==============================
     public static Connection Conexion() {
         try {
+        	Class.forName("org.sqlite.JDBC");
         	//JOptionPane.showMessageDialog(null, DB_URL);
             File carpeta = new File(carpetaBD);
             if (!carpeta.exists()) {
@@ -25,7 +26,7 @@ public class ConexionBD {
 
             return DriverManager.getConnection(DB_URL);
 
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             JOptionPane.showMessageDialog(
                     null,
                     "Error al conectar BD: " + e.getMessage()

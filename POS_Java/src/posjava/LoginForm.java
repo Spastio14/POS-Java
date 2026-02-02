@@ -51,8 +51,21 @@ public class LoginForm extends JFrame {
         Empleado emp = EmpleadoDAO.login(user, pass);
 
         if (emp != null) {
+        	Sesion.empleadoActual = emp;
             JOptionPane.showMessageDialog(this,
                     "Bienvenido " + emp.getNombre());
+            //se abre la ventana principal
+            Principal principal = new Principal();
+            principal.setVisible(true);
+
+            // cerrar login
+            this.dispose();
+            
+            if (Sesion.empleadoActual.getNombreRol().equals("ADMIN")) {
+            	Empleado e = Sesion.empleadoActual;
+            	System.out.println(e.getNombre());
+            }
+
         } else {
             JOptionPane.showMessageDialog(this,
                     "Usuario o contraseña incorrectos");
